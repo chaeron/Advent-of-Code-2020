@@ -11,7 +11,7 @@ Many of the puzzles are easier to solve if you first parse the input data into a
 
 Nested loops, recursion, modulo arithmetic (remainders) and regular expressions (RegEx) are very useful techniques to understand and use appropriately. RegExes are especially good for parsing of raw input data.
 
-It's best to read the puzzle description carefully, since there are hints that some brute-force approaches will take huge amounts of time to solve the problem! In that case, you need to come up with a more optimized approach to solving the problem.
+It's best to read the puzzle description carefully, since there are hints that some brute-force approaches will take huge amounts of time to solve the puzzle! In that case, you need to come up with a more optimized approach to solving the puzzle.
 
 I created a boilerplate code template for the puzzles since each day has two parts and has both test and real data, both of which have data parsing requirements.  This made it faster to focus on solving each puzzle, using a standardized approach and commands each day a new set of puzzles is released.
 
