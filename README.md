@@ -1,6 +1,6 @@
 # Advent of Code 2020 - Solutions
 
-This are my (Andrzej Taramina) solutons to the 2020 Advent of Code puzzles.
+This are my solutions to the 2020 Advent of Code puzzles.
 
 Solutions are coded in JavaScript and are run using NodeJS
 
@@ -10,6 +10,8 @@ Solutions are coded in JavaScript and are run using NodeJS
 Many of the puzzles are easier to solve if you first parse the input data into a more usable format/data structure (ie. arrays/objects)
 
 Nested loops, Recursion, modulo arithmetic (remainders) and regular expressions (RegEx) are very useful techniques to understand and use appropriately. RegExes are especially good for parsing of raw input data.
+
+Enjoy!
 
 ## Prerequisites
 
