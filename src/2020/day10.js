@@ -119,6 +119,8 @@ function isValidPath( input, from, to ) {
 }
 
 
+// This would have been easier to solve using a tribonacci sequence rather than a hard to understand recursive function that does the same thing
+
 function getPathPermutations( input, from, to, indent = "" ) {
   let permutations = 1;
 
