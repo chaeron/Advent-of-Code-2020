@@ -9,11 +9,13 @@ Solutions are coded in JavaScript and are run using NodeJS
 
 Many of the puzzles are easier to solve if you first parse the input data into a more usable format/data structure (ie. arrays/objects)
 
-Nested loops, Recursion, modulo arithmetic (remainders) and regular expressions (RegEx) are very useful techniques to understand and use appropriately. RegExes are especially good for parsing of raw input data.
+Nested loops, recursion, modulo arithmetic (remainders) and regular expressions (RegEx) are very useful techniques to understand and use appropriately. RegExes are especially good for parsing of raw input data.
 
-I created a boilerplate template for the puzzles since each day has two parts and has both test and real data, both of which data parsing requirements.  This made it faster to focus on solving each puzzle, using a standardized approach and commands.
+It's best to read the puzzle description carefully, since there are hints that some brute-force approaches will take huge amounts of time to solve the problem! In that case, you need to come up with a more optimized approach to solving the problem.
 
-For production code, I would use constants to reference related values for entries that were arrays or used objects with more descriptive keys instead of arrays of related values, but this is for fun, and so the extra work didn't seem warranted. LOL
+I created a boilerplate code template for the puzzles since each day has two parts and has both test and real data, both of which have data parsing requirements.  This made it faster to focus on solving each puzzle, using a standardized approach and commands each day a new set of puzzles is released.
+
+For production code, I would use constants to reference related values in entries that are arrays or maybe used objects with more descriptive keys instead of arrays of related values, but since this is for fun I didn't go to the trouble of doing that. Whatever was the most expedient....since the point is to solve the puzzles quickly, and not necessarily document every last little detail. LOL
 
 Enjoy!
 
