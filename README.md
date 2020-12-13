@@ -13,7 +13,7 @@ Nested loops, Recursion, modulo arithmetic (remainders) and regular expressions 
 
 I created a boilerplate template for the puzzles since each day has two parts and has both test and real data, both of which data parsing requirements.  This made it faster to focus on solving each puzzle, using a standardized approach and commands.
 
-For production code, I expect use of constants for array index values or objects with more descriptive keys instead of arrays of related values, but this is for fun, and so the extra work didn't seem warranted. LOL
+For production code, I would use constants to reference related values for entries that were arrays or used objects with more descriptive keys instead of arrays of related values, but this is for fun, and so the extra work didn't seem warranted. LOL
 
 Enjoy!
 
