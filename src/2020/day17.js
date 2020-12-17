@@ -30,7 +30,9 @@ const INPUT_REAL = fs.readFileSync( `./src/2020/data/day${DAY}.data` ).toString(
 function parse_data( lines, iterations ) {
   let parsed = [];
 
-  let max_dim = lines.length + 2 + ( 2 * iterations );
+  // Using a Map with "x,y,z,w" as keys would have worked just as well and might have been more "understandable"
+
+  let max_dim = lines.length + 2 + ( 2 * iterations );    // Build array bigger than necessary so that we don't have to worry about negative indexes and it's sized big enough for the number of expected iterations
 
   // create board
 
@@ -55,7 +57,7 @@ function parse_data( lines, iterations ) {
 
     for( let x = 0; x < values.length; x++ ) {
       if( values[x] == "#" ) {
-        board[ x + iterations + 1][i + iterations + 1][iterations + 1][iterations + 1] = 1;
+        board[ x + iterations + 1][i + iterations + 1][iterations + 1][iterations + 1] = 1;  // Offset the starting values so that we don't have to worry about negative indexes or going out of bounds
       }
     }
 
