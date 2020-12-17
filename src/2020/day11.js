@@ -23,7 +23,10 @@ const INPUT_TEST = [
 ]
 
 
-const INPUT_REAL = fs.readFileSync( './src/2020/data/day11.data' ).toString().split( "\n" );
+const DAY = process.argv[1].match( /day(\d*)\.js$/ )[1];
+
+const INPUT_REAL = fs.readFileSync( `./src/2020/data/day${DAY}.data` ).toString().split( "\n" );
+
 
 
 /************************************************************************************
@@ -212,8 +215,6 @@ function part2( day, input ) {
 
 const PART    = process.argv[2];
 const TEST    = process.argv[3];
-
-const DAY     = 11;
 
 let input;
 
