@@ -1,6 +1,13 @@
 "use strict";
 
 const fs  = require( 'fs' );
+const _   = require( 'lodash' );
+
+/************************************************************************************
+ * 
+ * Input Data
+ * 
+ ************************************************************************************/
 
 const INPUT_TEST = [
   "BFFFBBFRRR",
@@ -8,10 +15,29 @@ const INPUT_TEST = [
   "BBFFBBFRLL"
 ]
 
-const INPUT = fs.readFileSync( './src/2020/data/day5.data' ).toString().split( "\n" );
 
-// console.log( JSON.stringify( INPUT, null, 2 ) );
+const DAY = process.argv[1].match( /day(\d*)\.js$/ )[1];
 
+const INPUT_REAL = fs.readFileSync( `./src/2020/data/day${DAY}.data` ).toString().split( "\n" );
+
+
+
+/************************************************************************************
+ * 
+ * Parse Data Function
+ * 
+ ************************************************************************************/
+
+function parse_data( lines ) {
+  return( lines );
+}
+
+
+/************************************************************************************
+ * 
+ * Puzzle Implementation Functions
+ * 
+ ************************************************************************************/
 
 function getRowSeatNumbers( input ) {
   let matches = input.match( /^([FB]{7})([RL]{3})$/ );
@@ -26,13 +52,19 @@ function getRowSeatNumbers( input ) {
 }
 
 
-let part = 2;
 
-if( part == 1 ) {
+/************************************************************************************
+ * 
+ * Part 1 Function
+ * 
+ ************************************************************************************/
+
+ function part1( day, input ) {
+  let answer = 0;
 
   let max_id = 0;
 
-  for( let str of INPUT ) {
+  for( let str of input ) {
     let [ row, seat ] = getRowSeatNumbers( str );
 
     let seat_id = row * 8 + seat;
@@ -42,11 +74,24 @@ if( part == 1 ) {
     }
   }
 
-  console.log( `Day 5 answer, part ${part}: ${max_id}` );
-} else {
+  answer = max_id;
+
+  console.log( `Day ${day} answer, part 1: ${answer}` );
+ }
+
+
+ /************************************************************************************
+ * 
+ * Part 2 Function
+ * 
+ ************************************************************************************/
+
+function part2( day, input ) {
+  let answer = 0;
+
   let seats = [];
 
-  for( let str of INPUT ) {
+  for( let str of input ) {
     let [ row, seat ] = getRowSeatNumbers( str );
 
     let seat_id = row * 8 + seat;
@@ -66,5 +111,29 @@ if( part == 1 ) {
     }
   }
 
-  console.log( `Day 5 answer, part ${part}: ${my_seat}` );
+  answer = my_seat;
+
+  console.log( `Day ${day} answer, part 2: ${answer}` );
+ }
+
+
+/************************************************************************************
+ * 
+ * Main
+ * 
+ ************************************************************************************/
+
+const PART    = process.argv[2];
+const TEST    = process.argv[3];
+
+let input;
+
+if( TEST.startsWith( "t")  ) {
+  input = INPUT_TEST;
+} else {
+  input = INPUT_REAL;
 }
+
+const PARSED = parse_data( input );
+
+PART == "1" ? part1( DAY, PARSED ) : part2( DAY, PARSED );

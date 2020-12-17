@@ -10,22 +10,15 @@ const _   = require( 'lodash' );
  ************************************************************************************/
 
 const INPUT_TEST = [
-  "abc",
-  "",
-  "a",
-  "b",
-  "c",
-  "",
-  "ab",
-  "ac",
-  "",
-  "a",
-  "a",
-  "a",
-  "a",
-  "",
-  "b",
-  ""
+  "nop +0",
+  "acc +1",
+  "jmp +4",
+  "acc +3",
+  "jmp -3",
+  "acc -99",
+  "acc +1",
+  "jmp -4",
+  "acc +6",
 ]
 
 
@@ -44,19 +37,16 @@ const INPUT_REAL = fs.readFileSync( `./src/2020/data/day${DAY}.data` ).toString(
 function parse_data( lines ) {
   let parsed = [];
 
-  let group = [];
-
   for( let line of lines ) {
-    if( line ) {
-      group.push( line.split( "" ) );
-    } else {
-      if( group ) {
-        parsed.push( group );
-      }
 
-      group = [];
-    }
+
+
+    let entry = null;
+
+    parsed.push( entry );
   }
+  
+  // console.log( parsed );
 
   return( parsed );
 }
@@ -68,6 +58,11 @@ function parse_data( lines ) {
  * 
  ************************************************************************************/
 
+function my_fync( program, loc, accumulator ) {
+  
+
+}
+
 
 /************************************************************************************
  * 
@@ -77,18 +72,6 @@ function parse_data( lines ) {
 
  function part1( day, input ) {
   let answer = 0;
-
-  let sum = 0;
-
-  for( let group of input ) {
-    let answers = [].concat( ...group );
-
-    let deduped = _.uniq( answers );
-
-    sum += deduped.length;
-  }
-
-  answer = sum;
 
   console.log( `Day ${day} answer, part 1: ${answer}` );
  }
@@ -103,15 +86,6 @@ function parse_data( lines ) {
 function part2( day, input ) {
   let answer = 0;
 
-  let sum = 0;
-
-  for( let group of input ) {
-    let common = _.intersection( ...group );
-
-    sum += common.length;
-  }
-
-  answer = sum;
   
   console.log( `Day ${day} answer, part 2: ${answer}` );
  }
