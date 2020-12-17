@@ -30,7 +30,7 @@ const INPUT_REAL = fs.readFileSync( `./src/2020/data/day${DAY}.data` ).toString(
 function parse_data( lines, iterations ) {
   let parsed = [];
 
-  // Using a Map with "x,y,z,w" as keys would have worked just as well and might have been more "understandable"
+  // Using a Map with "x,y,z,w" as keys would have worked just as well and might have been more "understandable". See day17b.js for a more generic solution using a class and maps
 
   let max_dim = lines.length + 2 + ( 2 * iterations );    // Build array bigger than necessary so that we don't have to worry about negative indexes and it's sized big enough for the number of expected iterations
 
