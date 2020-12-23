@@ -39,12 +39,12 @@ $ npm install
 To run a solution for any particular day, you run a command that looks like this:
 
 ```sh
-$ node src/2020/day#.js {1|2} {t|p}
+$ node src/2020/day#.js {1|2} {t|r}
 ```
 where # = puzzle day
 
 first parameter denotes part 1 or 2
-second parameter denotes test or production data.
+second parameter denotes test or real (final) data.
 
 For example, to run the day 3 puzzle, part 2 using test data you would run:
 
@@ -55,5 +55,5 @@ $ node src/2020/day3.js 2 t
 To run the day 12 puzzle, part 1 using final/real puzzle data you would run:
 
 ```sh
-$ node src/2020/day12.js 1 p
+$ node src/2020/day12.js 1 r
 ```
