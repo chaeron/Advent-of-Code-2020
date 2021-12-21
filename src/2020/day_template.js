@@ -72,7 +72,7 @@ function parse_data( lines ) {
  * 
  ************************************************************************************/
 
-function my_fync( program, loc, accumulator ) {
+function my_func( program, loc, accumulator ) {
   
 
 }
@@ -116,7 +116,7 @@ const TEST    = process.argv[3];
 
 let input;
 
-if( TEST.startsWith( "t")  ) {
+if( TEST.startsWith( "t" )  ) {
   input = INPUT_TEST;
 } else {
   input = INPUT_REAL;

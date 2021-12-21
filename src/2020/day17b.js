@@ -262,7 +262,7 @@ let input;
 
 const ITERATIONS = 6;
 
-if( TEST.startsWith( "t")  ) {
+if( TEST.startsWith( "t" )  ) {
   input = INPUT_TEST;
 } else {
   input = INPUT_REAL;

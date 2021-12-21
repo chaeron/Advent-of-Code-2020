@@ -139,7 +139,7 @@ const TEST    = process.argv[3];
 
 let input;
 
-if( TEST.startsWith( "t")  ) {
+if( TEST.startsWith( "t" )  ) {
   input = INPUT_TEST;
 } else {
   input = INPUT_REAL;

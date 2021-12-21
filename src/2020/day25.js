@@ -94,7 +94,7 @@ function part1( day, input ) {
   log( `Card loop size: ${card_loop_size}` );
 
   let door_public_key = input[1];
-  let encryption_key = 1;
+  let encryption_key  = 1;
 
   for( let loop = 0; loop < card_loop_size; loop ++ ) {
     encryption_key = transform( encryption_key, door_public_key );
@@ -131,7 +131,7 @@ const TEST    = process.argv[3];
 
 let input;
 
-if( TEST.startsWith( "t")  ) {
+if( TEST.startsWith( "t" )  ) {
   input = INPUT_TEST;
 } else {
   input = INPUT_REAL;

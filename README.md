@@ -1,6 +1,6 @@
-# Advent of Code 2020 - Solutions
+# Advent of Code 2020+ - Solutions
 
-This are my solutions to the 2020 Advent of Code puzzles.
+This are my solutions to the 2020+ Advent of Code puzzles.
 
 Solutions are coded in JavaScript and are run using NodeJS
 
